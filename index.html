@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilutleie</title>
-    <link rel="stylesheet" href="stiler.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nettbutikk</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Bilutleie</h1>
-        <form id="bilUtleieSkjema">
-            <label for="bilType">Biltype:</label>
-            <select id="bilType" name="bilType">
-                <option value="standard">Standard</option>
-                <option value="premium">Premium</option>
-                <option value="luksus">Luksus</option>
-            </select>
-            <label for="dager">Antall dager:</label>
-            <input type="number" id="dager" name="dager" min="1" required>
-            <label for="total">Totalpris:</label>
-            <input type="text" id="total" name="total" readonly>
-            <input type="submit" value="Beregn totalpris">
-        </form>
+    <h1>Nettbutikk</h1>
+
+    <div id="products">
+        <div class="product">
+            <h2>Produkt 1</h2>
+            <img src="product1.jpg" alt="Produkt 1">
+            <p>Beskrivelse av Produkt 1</p>
+            <p>Pris: $10</p>
+            <button class="add-to-cart" onclick="addToCart('Produkt 1', 10)">Legg til i handlekurv</button>
+        </div>
+        <div class="product">
+            <h2>Produkt 2</h2>
+            <img src="product2.jpg" alt="Produkt 2">
+            <p>Beskrivelse av Produkt 2</p>
+            <p>Pris: $15</p>
+            <button class="add-to-cart" onclick="addToCart('Produkt 2', 15)">Legg til i handlekurv</button>
+        </div>
     </div>
 
-    <script src="skript.js"></script>
+    <hr>
+
+    <h2>Handlekurv</h2>
+    <ul id="cart"></ul>
+    <p>Total: $<span id="total">0</span></p>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
