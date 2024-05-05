@@ -1,20 +1,14 @@
-let cart = [];
+document.getElementById('registration-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-function addToCart(product, price) {
-    cart.push({ product: product, price: price });
-    updateCart();
-}
+    // Get form values
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-function updateCart() {
-    const cartList = document.getElementById('cart');
-    const totalElement = document.getElementById('total');
-    let total = 0;
-    cartList.innerHTML = '';
-    cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.product} - $${item.price}`;
-        cartList.appendChild(li);
-        total += item.price;
-    });
-    totalElement.textContent = total;
-}
+    // Here you can perform further validation or send the data to a backend server
+    // For this example, we'll just log the values to the console
+    console.log('Username:', username);
+    console.log('Email:', email);
+    console.log('Password:', password);
+});

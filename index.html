@@ -3,34 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nettbutikk</title>
+<title>Registrering</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Nettbutikk</h1>
-
-    <div id="products">
-        <div class="product">
-            <h2>Produkt 1</h2>
-            <img src="product1.jpg" alt="Produkt 1">
-            <p>Beskrivelse av Produkt 1</p>
-            <p>Pris: $10</p>
-            <button class="add-to-cart" onclick="addToCart('Produkt 1', 10)">Legg til i handlekurv</button>
+    <h1>Registrering</h1>
+    <form id="registration-form">
+        <div class="form-group">
+            <label for="username">Brukernavn:</label>
+            <input type="text" id="username" name="username" required>
         </div>
-        <div class="product">
-            <h2>Produkt 2</h2>
-            <img src="product2.jpg" alt="Produkt 2">
-            <p>Beskrivelse av Produkt 2</p>
-            <p>Pris: $15</p>
-            <button class="add-to-cart" onclick="addToCart('Produkt 2', 15)">Legg til i handlekurv</button>
+        <div class="form-group">
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
         </div>
-    </div>
-
-    <hr>
-
-    <h2>Handlekurv</h2>
-    <ul id="cart"></ul>
-    <p>Total: $<span id="total">0</span></p>
+        <div class="form-group">
+            <label for="password">Passord:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Registrer</button>
+    </form>
 
     <script src="script.js"></script>
 </body>
