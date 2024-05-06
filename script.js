@@ -29,5 +29,5 @@ function velgBiltype() {
         valgtBiltype = "Sedan";
     }
 
-    alert("Du valgte: " + valgtBiltype);
+    document.getElementById("resultat").innerText = "Du valgte: " + valgtBiltype;
 }
