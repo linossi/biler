@@ -1,107 +1,16 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilutleie.no</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velg Biltype</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <p class="logo">BILUTLEIE.NO</p>
-    </div>
-
-    <div class="container">
-        <div id="hoved">
-            <h1>Bilutleie</h1>
-            <p>Velkommen til Bilutleie.no! Vi er dedikert til å gi deg en enkel og pålitelig løsning for dine bilutleiebehov. Vårt mål er å gjøre prosessen med å leie en bil så problemfri som mulig, slik at du kan fokusere på din reiseopplevelse.</p>
-
-            <hr class="straight-line">
-
-            <div id="regler">
-                <h2>Regler for bilutleie:</h2>
-                <ul>
-                    <li>Alderskrav: For å leie en bil gjennom vår tjeneste må du være minst 21 år gammel, og du må ha hatt førerkort i minst ett år.</li>
-                    <li>Forsikring: Alle våre biler er forsikret, men det kan være forskjellige nivåer av forsikringsalternativer tilgjengelig. Vennligst les vilkårene nøye og velg riktig forsikringsalternativ for dine behov.</li>
-                    <li>Depositum: Et depositum kan kreves ved utleie av bilen. Depositumet vil bli refundert ved retur av bilen i samme stand som den ble levert.</li>
-                    <li>Betingelser for bruk: Ved leie av en bil forplikter du deg til å følge våre vilkår og betingelser, inkludert rettidig retur av bilen og unngåelse av overforbruk og skade.</li>
-                </ul>
-            </div>
-            <p>Vennligst merk at prisene kan variere avhengig av tilgjengelighet, sesong og andre faktorer. Kontakt oss direkte for spesifikke priser og tilgjengelighet.
-
-            Vi takker for at du valgte Bilutleie.no for dine reisebehov. Vi ser frem til å hjelpe deg med en trygg og komfortabel reiseopplevelse!</p>
-
-            <hr class="straight-line">
-
-            <h2>Spørreundersøkelse: Hvilken bil passer best for deg?</h2>
-    
-            <div id="spørsmål"></div>
-            <button id="neste">Neste</button>
-
-            <hr class="straight-line">
-            
-            <div class="form">
-                <h2>Velg tilleggstjenester:</h2>
-                <label>
-                    <input type="checkbox" value="Barnesete/bilsete" id="bs"> Barnesete/bilsete (+100kr)
-                </label>
-                <label>
-                    <input type="checkbox" value="Tilhengerfeste/dakboks" id="dakboks"> Tilhengerfeste/dakboks (+75kr)
-                </label>
-                <label>
-                    <input type="checkbox" value="Wi-Fi-hotspot" id="wifi"> Wi-Fi-hotspot (+200kr)
-                </label>
-                <label>
-                    <input type="checkbox" value="TV" id="tv"> TV (+200kr)
-                </label>
-    
-                <div class="form">
-                    <h2>Velg hentedato og returdato:</h2>
-                    <label for="hentedato">Hentedato:</label>
-                    <input type="date" id="hentedato">
-                    <label for="returdato">Returdato:</label>
-                    <input type="date" id="returdato">
-                </div>
-
-                <h2>Velg bilmodell:</h2>
-                 <select id="bilmodell">
-                    <option value="suv">SUV-modell</option>
-                    <option value="volvo">Volvo-modell</option>
-                    <option value="kompaktbil">Kompaktbil</option>
-                </select>
-
-            </div>
-            <button onclick="beregnPris()" id="knapp">Beregn pris</button>
-            <p id="valgOgPris"></p>
-          </div>
-        </div>
-
-        <div class="hoved-registrering">
-            <h1>Registreringsskjema</h1>
-            <form id="registreringsskjema">
-                <label for="fornavn">Fornavn:</label>
-                <input type="text" id="fornavn" name="fornavn" required>
-                
-                <label for="etternavn">Etternavn:</label>
-                <input type="text" id="etternavn" name="etternavn" required>
-                
-                <label for="postnummer">Postnummer:</label>
-                <input type="text" id="postnummer" name="postnummer" required>
-                
-                <label for="epost">E-postadresse:</label>
-                <input type="email" id="epost" name="epost" required>
-                
-                <label for="passord">Passord:</label>
-                <input type="password" id="passord" name="passord" required>
-                
-                <label for="bekreftPassord">Bekreft passord:</label>
-                <input type="password" id="bekreftPassord" name="bekreftPassord" required>
-                
-                <input type="submit" value="Registrer">
-            </form>
-            <div id="melding" class="suksess"></div>
-        </div>
-    </div>
+  <div class="container">
+    <h1>Velg Biltype</h1>
+    <button onclick="velgBiltype()">Start</button>
     <script src="script.js"></script>
+  </div>
 </body>
 </html>
