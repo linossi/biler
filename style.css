@@ -3,9 +3,13 @@
     margin-top: 50px;
   }
   
-  button {
-    padding: 10px 20px;
+  select, button {
+    margin-top: 10px;
     font-size: 16px;
+    padding: 5px;
+  }
+  
+  button {
     cursor: pointer;
   }
   

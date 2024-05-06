@@ -1,30 +1,33 @@
 function velgBiltype() {
-    let størrelse = prompt("Velg størrelse: Liten, Medium eller Stor");
-    if (størrelse.toLowerCase() === "liten") {
-        let effektivitet = prompt("Velg drivstoffeffektivitet: Lav, Medium eller Høy");
-        if (effektivitet.toLowerCase() === "lav") {
-            let terreng = prompt("Velg terrengtilpasning: Urban eller Blandet");
-            if (terreng.toLowerCase() === "urban") {
-                alert("Du valgte: Kompaktbil");
+    let størrelse = document.getElementById("størrelse").value;
+    let effektivitet = document.getElementById("effektivitet").value;
+    let terreng = document.getElementById("terreng").value;
+
+    let valgtBiltype = '';
+
+    if (størrelse === "liten") {
+        if (effektivitet === "lav") {
+            if (terreng === "urban") {
+                valgtBiltype = "Kompaktbil";
             } else {
-                alert("Du valgte: Sedan");
+                valgtBiltype = "Sedan";
             }
         } else {
-            alert("Du valgte: Sedan");
+            valgtBiltype = "Sedan";
         }
-    } else if (størrelse.toLowerCase() === "medium") {
-        let effektivitet = prompt("Velg drivstoffeffektivitet: Lav, Medium eller Høy");
-        if (effektivitet.toLowerCase() === "medium") {
-            let terreng = prompt("Velg terrengtilpasning: Blandet eller Terreng");
-            if (terreng.toLowerCase() === "blandet") {
-                alert("Du valgte: SUV");
+    } else if (størrelse === "medium") {
+        if (effektivitet === "medium") {
+            if (terreng === "blandet") {
+                valgtBiltype = "SUV";
             } else {
-                alert("Du valgte: Pickup Truck");
+                valgtBiltype = "Pickup Truck";
             }
         } else {
-            alert("Du valgte: Sedan");
+            valgtBiltype = "Sedan";
         }
     } else {
-        alert("Du valgte: Sedan");
+        valgtBiltype = "Sedan";
     }
+
+    alert("Du valgte: " + valgtBiltype);
 }

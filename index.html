@@ -9,7 +9,28 @@
 <body>
   <div class="container">
     <h1>Velg Biltype</h1>
-    <button onclick="velgBiltype()">Start</button>
+    <label for="størrelse">Størrelse:</label>
+    <select id="størrelse">
+      <option value="liten">Liten</option>
+      <option value="medium">Medium</option>
+      <option value="stor">Stor</option>
+    </select>
+    <br>
+    <label for="effektivitet">Drivstoffeffektivitet:</label>
+    <select id="effektivitet">
+      <option value="lav">Lav</option>
+      <option value="medium">Medium</option>
+      <option value="høy">Høy</option>
+    </select>
+    <br>
+    <label for="terreng">Terrengtilpasning:</label>
+    <select id="terreng">
+      <option value="urban">Urban</option>
+      <option value="blandet">Blandet</option>
+      <option value="terreng">Terreng</option>
+    </select>
+    <br>
+    <button onclick="velgBiltype()">Velg</button>
     <script src="script.js"></script>
   </div>
 </body>
